@@ -5,21 +5,16 @@ import {
   Typography,
   Grid,
   Box,
-  Paper,
   TextField,
-  Button,
-  Stack,
   IconButton,
 } from '@mui/material'
 import { InputAdornment } from '@mui/material'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 import { useTheme } from '@mui/material/styles' 
-
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
-import { Link, useNavigate } from 'react-router-dom'
-
+import {useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { resetPassword } from '../../redux/actions/Auth'
 import {
@@ -61,20 +56,6 @@ const Login = () => {
 
   const handleShowPassword = () => {
     setShowPwd(!showPwd)
-  }
-
-  const googleSuccess = async (res) => {
-    console.log(`LOGIN SUCCESS! Current user: ${res.profileObj}`)
-    console.log(res)
-
-    const result = res?.profileObj
-    const token = res?.tokenId
-    try {
-      dispatch({ type: 'AUTH', data: { result, token } })
-      navigate('/class')
-    } catch (error) {
-      console.log(error)
-    }
   }
 
   useEffect(() => {

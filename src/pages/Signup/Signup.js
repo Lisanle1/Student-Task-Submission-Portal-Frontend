@@ -5,9 +5,7 @@ import {
   Typography,
   Grid,
   Box,
-  Paper,
   TextField,
-  Button,
   FormControl,
   FormLabel,
   RadioGroup,
@@ -17,8 +15,7 @@ import {
   InputAdornment,
   IconButton,
 } from '@mui/material'
-
-import { styled, useTheme } from '@mui/material/styles'
+import {useTheme } from '@mui/material/styles'
 import {
   ColorButton,
   Responsive,
@@ -27,13 +24,10 @@ import {
 } from '../../components/CustomComponents'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
-
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import { Link, useNavigate } from 'react-router-dom'
-
 import { useDispatch } from 'react-redux'
-
 import { signup } from '../../redux/actions/Auth'
 
 const Signup = () => {

@@ -5,23 +5,13 @@ import {
   Typography,
   Grid,
   Box,
-  Paper,
   TextField,
-  Button,
-  Stack,
-  IconButton,
 } from '@mui/material'
-import { InputAdornment } from '@mui/material'
-import VisibilityIcon from '@mui/icons-material/Visibility'
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
-import { styled, useTheme } from '@mui/material/styles' 
 
+import {useTheme } from '@mui/material/styles' 
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
-import { GoogleLogin } from 'react-google-login'
-import { gapi } from 'gapi-script'
 import { Link, useNavigate } from 'react-router-dom'
-
 import { useDispatch } from 'react-redux'
 import { forgotPassword } from '../../redux/actions/Auth'
 import {
@@ -39,8 +29,6 @@ const Login = () => {
   const [user, setUser] = React.useState(
     JSON.parse(localStorage.getItem('token')),
   )
-  console.log(user)
-
   const [w, setW] = useState(window.innerWidth)
   const [showPwd, setShowPwd] = useState(true)
   const [loading, setLoading] = useState(false)
@@ -57,21 +45,6 @@ const Login = () => {
     await setLoading(true)
     await dispatch(forgotPassword(values, navigate))
     await setLoading(false)
-  }
-
-
-  const googleSuccess = async (res) => {
-    console.log(`LOGIN SUCCESS! Current user: ${res.profileObj}`)
-    console.log(res)
-
-    const result = res?.profileObj
-    const token = res?.tokenId
-    try {
-      dispatch({ type: 'AUTH', data: { result, token } })
-      navigate('/class')
-    } catch (error) {
-      console.log(error)
-    }
   }
 
   useEffect(() => {
