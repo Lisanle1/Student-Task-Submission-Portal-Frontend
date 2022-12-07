@@ -63,20 +63,6 @@ const Login = () => {
     setShowPwd(!showPwd)
   }
 
-  const googleSuccess = async (res) => {
-    console.log(`LOGIN SUCCESS! Current user: ${res.profileObj}`)
-    console.log(res)
-
-    const result = res?.profileObj
-    const token = res?.tokenId
-    try {
-      dispatch({ type: 'AUTH', data: { result, token } })
-      navigate('/class')
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   useEffect(() => {
     const handleResize = () => {
       setW(window.innerWidth)
