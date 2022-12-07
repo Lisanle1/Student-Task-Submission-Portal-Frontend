@@ -1,8 +1,8 @@
-Demo credentials:
-Admin Login: vishnu@gmai.com
-pass: vishnu123
-Student Login: madan12@gmail.com
-pass: madan123
+DEMO CREDENTIALS:
+ADMIN LOGIN: vishnu@gmail.com
+PASSWORD: vishnu123
+STUDENT LOGIN: madan12@gmail.com
+PASSWORD: madan123
 
 
 
