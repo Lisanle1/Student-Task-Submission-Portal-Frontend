@@ -1,9 +1,9 @@
 DEMO CREDENTIALS:
 
-Admin: vishnu@gmail.com
+Admin Login: vishnu@gmail.com
 password: vishnu123
 
-Student: madan12@gmail.com
+Student Login: madan12@gmail.com
 password: madan123
 
 
